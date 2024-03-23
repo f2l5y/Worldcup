@@ -42,3 +42,5 @@ OPP_ID=$($PSQL "SELECT team_id from teams WHERE name='$OPPONENT'")
 WINNER_ID=$($PSQL "SELECT team_id from teams WHERE name='$WINNER'")
 
 echo "$($PSQL "INSERT INTO games(year,round,winner_id,opponent_id,winner_goals,opponent_goals) VALUES($YEAR,'$ROUND',$OPP_ID,$WINNER_ID,$WINNER_G,$OPPONENT_G);")"
+fi
+done
